@@ -2,11 +2,13 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/cupertino.dart';
 
 class AppData with ChangeNotifier {
   bool readyExample = false;
   bool isSidebarLeftVisible = false;
   bool isSidebarRightVisible = false;
+  Color colorText = CupertinoColors.black;
 
   void toggleSidebarLeft() {
     isSidebarLeftVisible = !isSidebarLeftVisible;
@@ -17,6 +19,22 @@ class AppData with ChangeNotifier {
     isSidebarRightVisible = !isSidebarRightVisible;
     notifyListeners();
   }
+  void changeColor(color) {
+    switch(color){
+      case 0:
+        colorText = CupertinoColors.black;
+        break;
+      case 1:
+        colorText = Colors.red;
+        break;  
+      case 2:
+        colorText = Colors.green;
+        break;
+      case 3:
+        colorText = Colors.blue;
+        break;
+    }
+  notifyListeners();
 
   late dynamic dataExample;
 
@@ -75,4 +93,5 @@ class AppData with ChangeNotifier {
     // Notify listeners to update UI
     notifyListeners();
   }
+}
 }
