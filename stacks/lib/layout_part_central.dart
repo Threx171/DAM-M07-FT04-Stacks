@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import 'layout_part_left.dart';
+import 'layout_part_right.dart';
 import 'app_data.dart';
 
 class LayoutPartCentral extends StatefulWidget {
@@ -33,6 +34,11 @@ class LayoutPartCentralState extends State<LayoutPartCentral> {
                     semanticLabel: 'Text to announce in accessibility modes',
                   )),
               const SizedBox(width: 16),
+            ],
+          ),
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
               CupertinoButton(
                   padding: const EdgeInsets.all(0.0),
                   onPressed: appData.toggleSidebarRight,

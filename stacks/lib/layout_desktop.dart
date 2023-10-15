@@ -21,7 +21,7 @@ class _LayoutDesktopState extends State<LayoutDesktop> {
         isSidebarRightVisible: appData.isSidebarRightVisible,
         isSidebarLeftVisible: appData.isSidebarLeftVisible,
         left: const LayoutPartLeft(),
-        right: const LayoutPartRight(),
-        central: const LayoutPartCentral());
+        central: const LayoutPartCentral(),
+        right: const LayoutPartRight());
   }
 }

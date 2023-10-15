@@ -18,7 +18,7 @@ class LayoutPartRightState extends State<LayoutPartRight> {
       height: double.infinity, // Expandeix l'alt
       child: Column(
         crossAxisAlignment:
-            CrossAxisAlignment.end, // Alinea els elements a la dreta
+            CrossAxisAlignment.start, // Alinea els elements a la dreta
         children: [Text("Right")],
       ),
     );
