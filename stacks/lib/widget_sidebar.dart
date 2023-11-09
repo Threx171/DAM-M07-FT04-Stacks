@@ -53,13 +53,11 @@ class WidgetSidebarsState extends State<WidgetSidebars> {
         ),
         Align(
           alignment: Alignment.topRight,
-          child:
-            Container(
-              color: Color.fromRGBO(234, 228, 226, 1),
-              width: width,
-              child: widget.right,
-            ),
-        ),
+              child:Container(
+                  color: Color.fromRGBO(234,228,226,1),
+                  width: width,
+                  child: widget.right,
+        )),
         // Contingut Principal (central)
         AnimatedPositioned(
           duration: const Duration(milliseconds: millis),

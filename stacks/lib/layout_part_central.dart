@@ -83,12 +83,14 @@ class LayoutPartCentralState extends State<LayoutPartCentral> {
                 },
                 child: Icon(
                   CupertinoIcons.settings,
-                  color: appData.isSidebarRightVisible
+                  color: appData.isSidebarLeftVisible
                   ? CupertinoColors.activeBlue
                   : CupertinoColors.black,
                   size: 24.0,
                   semanticLabel: 'Text to announce in accessibility modes',
-                )
+                ),
+                
+                
           ),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
@@ -112,10 +114,14 @@ class LayoutPartCentralState extends State<LayoutPartCentral> {
           padding: const EdgeInsets.only(top: 50.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Text("Central",
+            children: [
+              Container(
+                alignment: Alignment.center,
+                child: Text("Center",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                             color: appData.colorText,
-                            ))],
+                            )))],
           ),
         ));
   }
